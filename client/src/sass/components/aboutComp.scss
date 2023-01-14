@@ -1,0 +1,85 @@
+/* About Component Styles  */
+
+// SCSS Variables 
+@import "../variables/coreVars.scss";
+
+.about-section {
+  margin: 1rem 0;
+  padding: .5rem;
+
+  .image-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    padding: 2rem;
+
+    .about-img {
+      height: 300px;
+      width: 300px;
+      border-radius: .8rem;
+    }
+
+    p {
+      padding: 1.2rem;
+      font-size: 1.2rem;
+
+      .about-btn-container {
+        width: 100%;
+        text-align: start;
+        margin: 1rem auto;
+
+        .about-btn {
+          padding: .65rem .85rem;
+          background-color: $pink-clr;
+          border-radius: 8px;
+          color: $light-clr;
+          transition: all 200ms ease;
+
+          &:hover {
+            cursor: pointer;
+            background-color: #c397ed;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Media Queries 
+
+// Mobile Screens 
+
+@media screen and (max-width: 825px) {
+
+  .about-section {
+    padding: 0;
+
+    .image-wrapper {
+      display: flex;
+      flex-direction: column !important;
+      justify-content: center;
+      align-items: center;
+      gap: 0%; 
+      padding: .8rem !important;
+
+      .about-img {
+        height: auto !important;
+        width: 45% !important;
+        max-width: 225px;
+        margin-bottom: 1.2rem;
+        border-radius: 1.56rem;
+      }
+
+      p {
+        padding: .1rem;
+        text-align: center;
+        font-size: 1.1rem !important;
+
+        .about-btn-container {
+          text-align: center !important;
+        }
+      }
+    }
+  }
+}
